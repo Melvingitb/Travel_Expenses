@@ -2,12 +2,25 @@
 
 double getAllowable(int days, int departure, int arrival)
 {
-    double totalAllowable;
-    double hotelAllowable;
+    double totalAllowable = 0;
+    double hotelAllowable = 0;
 
     hotelAllowable = 90 * (days - 1);
 
+    double parkingAllowable;
+
+    parkingAllowable = 6 * days;
+
+    double taxiAllowable = 0;
+
+    printf("How many days, out of your %d days, did you use a taxi?", days)
+    scanf("%d", &days);
+
+    taxiAllowable = 10 * days;
+
     
+
+
 
 
 }
@@ -20,7 +33,7 @@ double getLiving(int days, int departure, int arrival)
     return (hotel + meals);
 }
 
-double getHotelCost(int days)
+/*double getHotelCost(int days)
 {
     double raw = 0; //total spent by employee
     double allowable = 0; //allowable expenses
@@ -33,7 +46,7 @@ double getHotelCost(int days)
     total = raw - allowable; //total spent by employee minus allowed expenses
 
     return cost;
-}
+}*/
 
 double getMealCost(int departure, int arrival)
 {
