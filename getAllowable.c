@@ -2,6 +2,13 @@
 
 double getAllowable(int days, int departure, int arrival)
 {
+    double totalAllowable;
+    double hotelAllowable;
+
+    hotelAllowable = 90 * (days - 1);
+
+    
+
 
 }
 
