@@ -7,6 +7,7 @@ double getLiving()
 
     printf("Enter the total expense(s) spent on hotels: ");
     scanf("%f\n", &hotel);
+    
     printf("Enter the total expense(s) spent on meals: ");
     scanf("%f\n", &meals);
 
