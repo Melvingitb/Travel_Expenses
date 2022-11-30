@@ -2,7 +2,7 @@
 
 int getDays(){
     int days = 0;
-    int check = 0;
+    int check = 0; //for input validation
 
     while (check == 0){
         printf("How many days total were spent on the trip?\n");
@@ -29,7 +29,7 @@ int getDeparture(){
         scanf("%d", &departure);
 
         if (departure < 0 || departure % 100 > 60 || departure > 2359){
-            printf("Please enter a valid departure time.");
+            printf("Please enter a valid departure time.\n");
         }
         else{
             check = 1;
@@ -48,7 +48,7 @@ int getArrival(){
         scanf("%d", &arrival);
 
         if (arrival < 0 || arrival % 100 > 60 || arrival > 2359){
-            printf("Please enter a valid arrival time.");
+            printf("Please enter a valid arrival time.\n");
         }
         else{
             check = 1;
