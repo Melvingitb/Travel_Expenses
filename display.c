@@ -10,7 +10,7 @@ void getDisplay(double total, double allowable, double expense){
 
     printf("Total allowable expenses: %d\n", &allowable);
 
-    final = total - expsnse;
+    final = total - expense;
 
     if(final > allowable){
         printf("You owe: %d\n", &final);
