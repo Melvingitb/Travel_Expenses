@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+double getAllowable(int days, int departure, int arrival)
+{
+
+}
+
 double getLiving(int days, int departure, int arrival)
 {
     double hotel = getHotelCost(days);
