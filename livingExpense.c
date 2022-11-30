@@ -2,6 +2,10 @@
 
 double getLiving(int days, int departure, int arrival)
 {
+    double hotel = getHotelCost(days);
+    double meals = getMealCost(departure, arrival);
+
+    return (hotel + meals);
 }
 
 double getHotelCost(int days)
