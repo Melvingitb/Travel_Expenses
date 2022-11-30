@@ -3,14 +3,18 @@
 double getAllowable(int days, int departure, int arrival)
 {
     double totalAllowable = 0;
+
+    //////////HOTEL////////////
     double hotelAllowable = 0;
 
     hotelAllowable = 90 * (days - 1);
 
+    //////////PARKING////////////
     double parkingAllowable;
 
     parkingAllowable = 6 * days;
 
+    //////////TAXI////////////
     double taxiAllowable = 0;
 
     printf("How many days, out of your %d days, did you use a taxi?", days)
@@ -18,43 +22,12 @@ double getAllowable(int days, int departure, int arrival)
 
     taxiAllowable = 10 * days;
 
-    
-
-
-
-
-}
-
-double getLiving(int days, int departure, int arrival)
-{
-    double hotel = getHotelCost(days);
-    double meals = getMealCost(departure, arrival);
-
-    return (hotel + meals);
-}
-
-/*double getHotelCost(int days)
-{
-    double raw = 0; //total spent by employee
-    double allowable = 0; //allowable expenses
-    double total = 0; //total amount employee owes
-    allowable = 90 * (days - 1);
-
-    printf("Enter the total expense(s) spent on hotels.");
-    scanf("%f", &raw);
-
-    total = raw - allowable; //total spent by employee minus allowed expenses
-
-    return cost;
-}*/
-
-double getMealCost(int departure, int arrival)
-{
+    //////////MEALS////////////
     double firstBreakfastRaw = 0; //money spent by employee on breakfast on the first day
     double firstLunchRaw = 0; //money spent by employee on lunch on the first day
     double firstDinnerRaw = 0; //money spent by employee on dinner on the first day
     double firstBreakfastFinal, firstLunchFinal, firstDinnerFinal; //money spent after taking into account allowed expenses on the first day
-    double total = 0; //total amount employee owes
+    double mealAllowable = 0; //total amount employee owes
     printf("Enter the total expense(s) of breakfast, lunch, and dinner, on the first day of your trip, seperately\n");
     printf("Cost of your breakfast on the first day: \n");
     printf("Enter zero if you did not have breakfast on the first day\n");
@@ -111,7 +84,11 @@ double getMealCost(int departure, int arrival)
 
     }
 
-    total = firstBreakfastFinal + firstLunchFinal + firstDinnerFinal + lastBreakfastFinal + lastLunchFinal + lastDinnerFinal; //total cost of meals after taking allowed expenses to account
+    mealAllowable = firstBreakfastFinal + firstLunchFinal + firstDinnerFinal + lastBreakfastFinal + lastLunchFinal + lastDinnerFinal; //total cost of meals after taking allowed expenses to account
 
-    return total;
+    //////////FINAL////////////
+    totalAllowable = hotelAllowable + parkingAllowable + taxiAllowable + mealAllowable;
+
+    return totalAllowable;
+
 }
