@@ -11,14 +11,14 @@ double getLiving(int days, int departure, int arrival)
 double getHotelCost(int days)
 {
     double raw = 0;
-    double cost = 0;
+    double total = 0;
     double allowable = 0;
     allowable = 90 * (days - 1);
 
     printf("Enter the total expense(s) spent on hotels.");
     scanf("%f", &raw);
 
-    cost = raw - allowable;
+    total = raw - allowable;
 
     return cost;
 }
