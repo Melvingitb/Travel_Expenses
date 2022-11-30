@@ -21,6 +21,8 @@ int main(){
     //printf("%d %d", departure, arrival);
 
     allowable = getAllowable(days, departure, arrival);
+    printf("%lf", allowable);
+    //getDisplay(total, allowable, expense);
 
     //get round-trip airfare, car rentals, miles driven, and conference and seminar registration fees; add it to total expenses
     total += getTransport();

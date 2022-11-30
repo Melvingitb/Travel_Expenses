@@ -11,7 +11,7 @@ double getTransport() {
     while(check == 0){
         printf("How much was the total round-trip airfare?\n");
 
-        scanf("%d", &temp);
+        scanf("%lf", &temp);
         if (temp >= 0.0){
             total += temp;
             check = 1;
@@ -27,7 +27,7 @@ double getTransport() {
     while(check == 0){
         printf("How much was was spent on car rentals for the trip?\n");
 
-        scanf("%d", temp);
+        scanf("%lf", &temp);
 
         if (temp >= 0.0){
             total += temp;
@@ -44,7 +44,7 @@ double getTransport() {
     while(check == 0){
         printf("How much was was spent conference or seminars?\n");
 
-        scanf("%d", temp);
+        scanf("%lf", &temp);
 
         if (temp >= 0.0){
             total += temp;
@@ -62,7 +62,7 @@ double getTransport() {
     while(check == 0){
         printf("Was a private vehicle used? (0 for no, 1 for yes)\n");
 
-        scanf("%d", &temp);
+        scanf("%lf", &temp);
         if (temp == 0 || temp == 1){
             check = 1;
         } else {
@@ -80,9 +80,10 @@ double getTransport() {
     while(check == 0){
         printf("How many miles were driven in the private vehicle?\n");
 
-        scanf("%d", &temp);
+        scanf("%lf", &temp);
         if(temp >= 0.0){
             total += (temp * 0.27);
+            check = 1;
         } else {
             printf("Please enter a postive value.");
         }

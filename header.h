@@ -1,7 +1,7 @@
 #ifndef HEADER_H
 #define HEADER_H
 
-void getDisplay(int total, int allowable, int expense);
+void getDisplay(double total, double allowable, double expense);
 
 double getAllowable(int days, int departure, int arrival);
 

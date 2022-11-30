@@ -10,7 +10,7 @@ double getAllowable(int days, int departure, int arrival)
     hotelAllowable = 90 * (days - 1);
 
     //////////PARKING////////////
-    double parkingAllowable;
+    double parkingAllowable = 0;
 
     parkingAllowable = 6 * days;
 
