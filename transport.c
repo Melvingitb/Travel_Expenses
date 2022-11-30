@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-double getTransport(int days) {
+double getTransport() {
     
     double total = 0.0;
     double temp = 0.0;
@@ -23,9 +23,24 @@ double getTransport(int days) {
 
     //reset check 
     check = 0;
-    //get the total spend on car rental and add it to total
+    //get the total spent on car rental and add it to total
     while(check == 0){
         printf("How much was was spent on car rentals for the trip?\n");
+
+        if (temp >= 0.0){
+            total += temp;
+            check == 1;
+        } else {
+            printf("Please enter a postive value.");
+        }
+    }
+
+
+    //reset check 
+    check = 0;
+    //get the total spent on conference or seminars
+    while(check == 0){
+        printf("How much was was spent conference or seminars?\n");
 
         if (temp >= 0.0){
             total += temp;
