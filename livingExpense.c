@@ -4,12 +4,15 @@ double getLiving()
 {
     double hotel;
     double meals;
+    double total;
 
     printf("Enter the total expense(s) spent on hotels: ");
     scanf("%f\n", &hotel);
-    
+
     printf("Enter the total expense(s) spent on meals: ");
     scanf("%f\n", &meals);
 
-    return (hotel + meals);
+    total = hotel + meals;
+
+    return total;
 }
