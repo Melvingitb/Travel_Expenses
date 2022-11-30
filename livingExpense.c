@@ -40,7 +40,7 @@ double getMealCost(int departure, int arrival)
     printf("Cost of your dinner on the first day: \n");
     printf("Enter zero if you did not have dinner on the first day\n");
     scanf("%f", &firstDinnerRaw);
-    switch (departure) //allowed expenses depending on departure time
+    switch (departure) //allowed expenses on the first day depending on departure time
     {
         case departure < 700:
             firsBreakfastFinal = firstBreakfastRaw - 9;
@@ -70,16 +70,16 @@ double getMealCost(int departure, int arrival)
     printf("Cost of your dinner on the last day: \n");
     printf("Enter zero if you did not have dinner on the last day\n");
     scanf("%f", &lastDinnerinnerRaw);
-    switch (arrival)
-    {/////////////////////////////////////////////////////////////
-        case arrival > 800:
-            lastBreakfastFinal = lastBreakfastRaw - 9;
+    switch (arrival) //allowed expenses on the last day depending on arrival time
+    {
+        case arrival > 1900;
+            lastDinnerFinal = lastDinnerRaw - 16;
 
         case arrival > 1300;
             lastLunchFinal = lastLunchRaw - 12;
 
-        case arrival > 1900;
-            lastDinnerFinal = lastDinnerRaw - 16;
+        case arrival > 800:
+            lastBreakfastFinal = lastBreakfastRaw - 9;
 
         default:
             break;
