@@ -16,75 +16,108 @@ double getAllowable(int days, int departure, int arrival)
 
     //////////TAXI////////////
     double taxiAllowable = 0;
-
+    int taxiDays = 0;
     printf("How many days, out of your %d days, did you use a taxi?", days)
-    scanf("%d", &days);
+    scanf("%d", &taxiDays);
 
     taxiAllowable = 10 * days;
 
     //////////MEALS////////////
-    double firstBreakfastRaw = 0; //money spent by employee on breakfast on the first day
-    double firstLunchRaw = 0; //money spent by employee on lunch on the first day
-    double firstDinnerRaw = 0; //money spent by employee on dinner on the first day
-    double firstBreakfastFinal, firstLunchFinal, firstDinnerFinal; //money spent after taking into account allowed expenses on the first day
-    double mealAllowable = 0; //total amount employee owes
-    printf("Enter the total expense(s) of breakfast, lunch, and dinner, on the first day of your trip, seperately\n");
-    printf("Cost of your breakfast on the first day: \n");
-    printf("Enter zero if you did not have breakfast on the first day\n");
-    scanf("%f", &firstBreakfastRaw);
-    printf("Cost of your lunch on the first day: \n");
-    printf("Enter zero if you did not have lunch on the first day\n");
-    scanf("%f", &firstLunchRaw);
-    printf("Cost of your dinner on the first day: \n");
-    printf("Enter zero if you did not have dinner on the first day\n");
-    scanf("%f", &firstDinnerRaw);
+    double firstBreakfast;
+    double firstLunch;
+    double firstDinner;
+    double mealAllowable;
+    printf("Enter 1 for 'yes' or 0 for 'no'\n");
+    printf("Did you buy breakfast on the first day: \n");
+    scanf("%f", &firstBreakfast);
+    printf("Did you buy lunch on the first day: \n");
+    scanf("%f", &firstLunch);
+    printf("Did you buy dinner on the first day: \n");
+    scanf("%f", &firstDinner);
     switch (departure) //allowed expenses on the first day depending on departure time
     {
         case departure < 700:
-            firsBreakfastFinal = firstBreakfastRaw - 9;
+            if (firstBreakfast == 1)
+            {
+                mealAllowable + 9;
+            } else if (firstBreakfast == 0)
+            {
+            } else {
+                printf("Not a valid response\n");
+            }
 
         case departure < 1200;
-            firstLunchFinal = firstLunchRaw - 12;
+            if (firstLunch == 1)
+            {
+                mealAllowable + 12;
+            } else if (firstLunch == 0)
+            {
+            } else {
+                printf("Not a valid response\n");
+            }
 
         case departure < 1800;
-            firstDinnerFinal = firstDinnerRaw - 16;
+            if (firstDinner == 1)
+            {
+                mealAllowable + 16
+            } else if (firstDinner == 0)
+            {
+            } else {
+                printf("Not a valid response\n");
+            }
+
 
         default:
             break;
 
     }
 
-    double lastBreakfastRaw = 0; //money spent by employee on breakfast on the last day
-    double lastLunchRaw = 0; //money spent by employee on lunch on the last day
-    double lastDinnerRaw = 0; //money spent by emplyee on dinner on the last day
-    double lastBreakfastFinal, lastLunchFinal, lastDinnerFinal; //money spent after taking into account allowed expenses on the last day
-    printf("Enter the total expense(s) of breakfast, lunch, and dinner, on the last day of your trip, seperately\n");
-    printf("Cost of your breakfast on the last day: \n");
-    printf("Enter zero if you did not have breakfast on the last day\n");
-    scanf("%f", &lastBreakfastRaw);
-    printf("Cost of your lunch on the last day: \n");
-    printf("Enter zero if you did not have lunch on the last day\n");
-    scanf("%f", &lastLunchRaw);
-    printf("Cost of your dinner on the last day: \n");
-    printf("Enter zero if you did not have dinner on the last day\n");
-    scanf("%f", &lastDinnerinnerRaw);
+    double lastBreakfast;
+    double lastLunch;
+    double lastDinner;
+    printf("Enter 1 for 'yes' or 0 for 'no'\n");
+    printf("Did you buy breakfast on the last day: \n");
+    scanf("%f", &lastBreakfast);
+    printf("Did you buy lunch on the last day: \n");
+    scanf("%f", &lastLunch);
+    printf("Did you buy dinner on the last day: \n");
+    scanf("%f", &lastDinner);
     switch (arrival) //allowed expenses on the last day depending on arrival time
     {
         case arrival > 1900;
-            lastDinnerFinal = lastDinnerRaw - 16;
+            if (lastBreakfast == 1)
+            {
+                mealAllowable + 9;
+            } else if (lastBreakfast == 0)
+            {
+            } else {
+                printf("Not a valid response\n");
+            }
 
         case arrival > 1300;
-            lastLunchFinal = lastLunchRaw - 12;
+            if (lastLunch == 1)
+            {
+                mealAllowable + 12;
+            }else if (lastLunch == 0)
+            {
+            } else {
+                printf("Not a valid response\n");
+            }
 
         case arrival > 800:
-            lastBreakfastFinal = lastBreakfastRaw - 9;
+            if (lastDinner == 1)
+            {
+                mealAllowable + 16;
+            }else if (lastDinner == 0)
+            {
+            } else {
+                printf("Not a valid response\n");
+            }
 
         default:
             break;
 
     }
-
-    mealAllowable = firstBreakfastFinal + firstLunchFinal + firstDinnerFinal + lastBreakfastFinal + lastLunchFinal + lastDinnerFinal; //total cost of meals after taking allowed expenses to account
 
     //////////FINAL////////////
     totalAllowable = hotelAllowable + parkingAllowable + taxiAllowable + mealAllowable;
