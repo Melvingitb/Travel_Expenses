@@ -10,19 +10,43 @@ double getAllowable(int days, int departure, int arrival)
     hotelAllowable = 90 * (days - 1);
 
     //////////PARKING////////////
-    double parkingAllowable;
+    double parkingAllowable = 0;
 
     parkingAllowable = 6 * days;
 
     //////////TAXI////////////
     double taxiAllowable = 0;
     int taxiDays = 0;
-    printf("How many days, out of your %d days, did you use a taxi?", days)
-    scanf("%d", &taxiDays);
+    //printf("How many days, out of your %d days, did you use a taxi?", days);
+    //scanf("%d", &taxiDays);
 
     taxiAllowable = 10 * days;
 
     //////////MEALS////////////
+
+    double mealAllowable = 0;
+
+    if(departure < 700){
+        mealAllowable += 37;
+    }
+    else if (departure < 1200){
+        mealAllowable += 28;
+    }
+    else if (departure < 1800){
+        mealAllowable += 16;
+    }
+
+    if (arrival > 1900){
+        mealAllowable += 37;
+    }
+    else if (arrival > 1300){
+        mealAllowable += 21;
+    }
+    else if (arrival > 800){
+        mealAllowable += 9;
+    }
+
+    /*
     double firstBreakfast;
     double firstLunch;
     double firstDinner;
@@ -118,7 +142,7 @@ double getAllowable(int days, int departure, int arrival)
             break;
 
     }
-
+    */
     //////////FINAL////////////
     totalAllowable = hotelAllowable + parkingAllowable + taxiAllowable + mealAllowable;
 

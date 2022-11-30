@@ -18,25 +18,27 @@ int main(){
     departure = getDeparture();
     arrival = getArrival();
 
-    printf("%d %d", departure, arrival);
+    //printf("%d %d", departure, arrival);
 
     allowable = getAllowable(days, departure, arrival);
+    printf("%lf", allowable);
+    //getDisplay(total, allowable, expense);
 
     //get round-trip airfare, car rentals, miles driven, and conference and seminar registration fees; add it to total expenses
     total += getTransport();
 
     //get parking fees and taxi fees; add it to public expenses and total. expenses is used to calculate how much must be reimbursed
-    publicexpense += getPublic(days);
+    publicexpense += getPublic();
     total += publicexpense;
 
     //get hotel expenses and food costs; add it to loving expenses and total. expenses is used to calculate how much must be reimbursed
-    livingexpense += getLiving(days, departure, arrival);
+    livingexpense += getLiving();
     total += livingexpense;
 
     expense = publicexpense + livingexpense;
 
     //get the total amount of allowable expenses from the company
-    allowable = getAllowable(days, departure, arrival);
+    //allowable = getAllowable(days, departure, arrival);
 
     //display final results
     getDisplay(total, allowable, expense);

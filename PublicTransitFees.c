@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-double getPublic(int days){
+double getPublic(){
   double totalExpense = 0;
   double input = -1;
   //double feeAccumulator = 0;
   
-  printf("Enter the total taxi fee:\n";
+  printf("Enter the total taxi fee:\n");
 
   // Validates taxi fee >= 0
   while (input < 0){
@@ -21,7 +21,7 @@ double getPublic(int days){
     totalExpense += (input - (10 * days));
   }*/
 
-  printf("Enter the total parking fee:\n";
+  printf("Enter the total parking fee:\n");
 
   // Validates parking fee >= 0
   while (input < 0){
