@@ -2,14 +2,16 @@
 
 double getPublic(int days){
   double totalExpense = 0;
-  double input;
+  double input = -1;
   //double feeAccumulator = 0;
   
   for (int i = 0; i < days; i++){
     printf("Enter the taxi fee for day %d", (i + 1));
-
-    scanf("%lf", &input);
-
+    
+    while (input < 0){
+      scanf("%lf", &input);
+    }
+    
     if (input > 10){
       totalExpense += (input - 10);
     }
@@ -18,7 +20,9 @@ double getPublic(int days){
   for (int i = 0; i < days; i++){
     printf("Enter the parking fee for day %d", (i + 1));
 
-    scanf("%lf", &input);
+    while (input < 0){
+      scanf("%lf", &input);
+    }
 
     if (input > 6){
       totalExpense += (input - 6);
