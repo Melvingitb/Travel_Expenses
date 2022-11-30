@@ -39,7 +39,7 @@ double getAllowable(int days, int departure, int arrival)
         case departure < 700:
             if (firstBreakfast == 1)
             {
-                mealAllowable + 9;
+                mealAllowable += 9;
             } else if (firstBreakfast == 0)
             {
             } else {
@@ -49,7 +49,7 @@ double getAllowable(int days, int departure, int arrival)
         case departure < 1200;
             if (firstLunch == 1)
             {
-                mealAllowable + 12;
+                mealAllowable += 12;
             } else if (firstLunch == 0)
             {
             } else {
@@ -59,7 +59,7 @@ double getAllowable(int days, int departure, int arrival)
         case departure < 1800;
             if (firstDinner == 1)
             {
-                mealAllowable + 16
+                mealAllowable += 16
             } else if (firstDinner == 0)
             {
             } else {
@@ -87,7 +87,7 @@ double getAllowable(int days, int departure, int arrival)
         case arrival > 1900;
             if (lastBreakfast == 1)
             {
-                mealAllowable + 9;
+                mealAllowable += 9;
             } else if (lastBreakfast == 0)
             {
             } else {
@@ -97,7 +97,7 @@ double getAllowable(int days, int departure, int arrival)
         case arrival > 1300;
             if (lastLunch == 1)
             {
-                mealAllowable + 12;
+                mealAllowable += 12;
             }else if (lastLunch == 0)
             {
             } else {
@@ -107,7 +107,7 @@ double getAllowable(int days, int departure, int arrival)
         case arrival > 800:
             if (lastDinner == 1)
             {
-                mealAllowable + 16;
+                mealAllowable += 16;
             }else if (lastDinner == 0)
             {
             } else {
