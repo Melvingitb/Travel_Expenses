@@ -1,3 +1,3 @@
 CC = gcc
-program: main.c PublicTransitFees.c display.c getAllowable.c header.h livingExpense.c time.c transport.c 
+program: src/main.c include/header.h src/PublicTransitFees.c src/display.c src/getAllowable.c src/livingExpense.c src/time.c src/transport.c 
 	$(CC) -Iinclude src/*.c -o expense
